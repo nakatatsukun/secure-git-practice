@@ -10,10 +10,11 @@ jobs:
       - name: リポジトリのチェックアウト
         uses: actions/checkout@v4
 
+
       - name: Netlify にデプロイメント
         uses: nwtgck/actions-netlify@v3.0
         with:
-          publish-dir: '.'
+          publish-dir: "."
           production-deploy: true
           deploy-message: ${{ github.event.head_commit.message || github.event.pull_request.title }}
         env:
